@@ -16,7 +16,7 @@ const experienceData = [
   {
     title: "B.Tech Student",
     organization: "Jaipur Engineering College",
-    period: "2022 - Present",
+    period: "2023 - Present",
     location: "Jaipur, Rajasthan",
     description: "Pursuing Bachelor of Technology with focus on computer science fundamentals and programming languages.",
     highlights: [

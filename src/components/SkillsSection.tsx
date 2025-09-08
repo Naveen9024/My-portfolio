@@ -10,7 +10,7 @@ const skillsData = [
   {
     category: "Programming",
     icon: <Code className="w-8 h-8" />,
-    skills: ["C", "C++"],
+    skills: ["C", "C++", "Java", "Python"],
     color: "violet-purple"
   },
   {
@@ -76,7 +76,8 @@ const SkillsSection = () => {
                 { skill: "HTML/CSS", level: 90 },
                 { skill: "JavaScript", level: 85 },
                 { skill: "C/C++", level: 80 },
-                { skill: "Git/Version Control", level: 75 }
+                { skill: "Java/Python", level: 75 },
+                { skill: "Git/Version Control", level: 70 }
               ].map((item) => (
                 <div key={item.skill} className="space-y-2">
                   <div className="flex justify-between text-sm">

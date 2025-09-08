@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const titles = ["Full Stack", "Web Developer", "Programmer", "Problem Solver"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -16,23 +27,57 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 scroll-reveal">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
+          {/* Profile Photo */}
+          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+            <div className="relative">
+              <div className="w-64 h-64 rounded-full overflow-hidden glass-card p-2 floating">
+                <img 
+                  src="/lovable-uploads/674234f5-68ac-4eb8-a8b6-d87daca88fb7.png" 
+                  alt="Naveen Saini - Full Stack Developer"
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-2 -right-2 w-12 h-12 bg-electric-blue/30 rounded-full blur-lg animate-glow-pulse" />
+              <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-violet-purple/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '1s' }} />
+            </div>
+          </div>
+
+          {/* Center Content */}
+          <div className="space-y-8 scroll-reveal order-1 lg:order-2 lg:col-span-1">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-gradient-primary">Full Stack</span><br />
-                <span className="text-foreground">Web Developer</span><br />
-                <span className="text-gradient-secondary">& Problem Solver</span>
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-center lg:text-left">
+                <div className="h-20 flex items-center justify-center lg:justify-start">
+                  <span className={`text-gradient-primary transition-all duration-500 ${
+                    currentTitle === 0 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
+                  } ${currentTitle === 0 ? 'block' : 'hidden'}`}>
+                    Full Stack
+                  </span>
+                  <span className={`text-gradient-secondary transition-all duration-500 ${
+                    currentTitle === 1 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
+                  } ${currentTitle === 1 ? 'block' : 'hidden'}`}>
+                    Web Developer
+                  </span>
+                  <span className={`text-gradient-primary transition-all duration-500 ${
+                    currentTitle === 2 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
+                  } ${currentTitle === 2 ? 'block' : 'hidden'}`}>
+                    Programmer
+                  </span>
+                  <span className={`text-gradient-secondary transition-all duration-500 ${
+                    currentTitle === 3 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
+                  } ${currentTitle === 3 ? 'block' : 'hidden'}`}>
+                    Problem Solver
+                  </span>
+                </div>
               </h1>
               
-              <p className="text-xl text-foreground-muted leading-relaxed max-w-2xl">
+              <p className="text-lg text-foreground-muted leading-relaxed max-w-xl text-center lg:text-left">
                 I'm a developer who crafts responsive websites. My job is to make sure every site I build is fast, 
                 user-friendly, and looks amazing on any screen. Currently pursuing B.Tech at Jaipur Engineering College.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 variant="hero" 
                 size="lg" 
@@ -55,24 +100,24 @@ const HeroSection = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-glass-border/30">
+            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-glass-border/30">
               <div className="text-center">
-                <div className="text-3xl font-bold text-gradient-primary">5+</div>
-                <div className="text-sm text-foreground-muted">Projects</div>
+                <div className="text-2xl lg:text-3xl font-bold text-gradient-primary">5+</div>
+                <div className="text-xs lg:text-sm text-foreground-muted">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gradient-secondary">4+</div>
-                <div className="text-sm text-foreground-muted">Certifications</div>
+                <div className="text-2xl lg:text-3xl font-bold text-gradient-secondary">4+</div>
+                <div className="text-xs lg:text-sm text-foreground-muted">Certifications</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gradient-primary">1+</div>
-                <div className="text-sm text-foreground-muted">Years Learning</div>
+                <div className="text-2xl lg:text-3xl font-bold text-gradient-primary">1+</div>
+                <div className="text-xs lg:text-sm text-foreground-muted">Years Learning</div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Abstract Image */}
-          <div className="relative">
+          <div className="relative order-3 lg:order-3">
             <div className="relative glass-card p-8 floating">
               <img 
                 src={heroImage} 
