@@ -4,13 +4,13 @@ const skillsData = [
   {
     category: "Frontend",
     icon: <Laptop className="w-8 h-8" />,
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
     color: "electric-blue"
   },
   {
     category: "Programming",
     icon: <Code className="w-8 h-8" />,
-    skills: ["C", "C++", "Java", "Python"],
+    skills: ["C", "C++", "Java", "Python", "TypeScript"],
     color: "violet-purple"
   },
   {
