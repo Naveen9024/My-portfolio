@@ -47,23 +47,28 @@ const HeroSection = () => {
           <div className="space-y-8 scroll-reveal order-1 lg:order-2 lg:col-span-1">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-center lg:text-left">
+                <div className="mb-4">
+                  <span className="text-foreground text-3xl lg:text-5xl block">
+                    Naveen Saini
+                  </span>
+                </div>
                 <div className="h-20 flex items-center justify-center lg:justify-start">
-                  <span className={`text-gradient-primary transition-all duration-500 ${
+                  <span className={`text-gradient-primary transition-all duration-500 animate-pulse ${
                     currentTitle === 0 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
                   } ${currentTitle === 0 ? 'block' : 'hidden'}`}>
                     Full Stack
                   </span>
-                  <span className={`text-gradient-secondary transition-all duration-500 ${
+                  <span className={`text-gradient-secondary transition-all duration-500 animate-pulse ${
                     currentTitle === 1 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
                   } ${currentTitle === 1 ? 'block' : 'hidden'}`}>
                     Web Developer
                   </span>
-                  <span className={`text-gradient-primary transition-all duration-500 ${
+                  <span className={`text-gradient-primary transition-all duration-500 animate-pulse ${
                     currentTitle === 2 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
                   } ${currentTitle === 2 ? 'block' : 'hidden'}`}>
                     Programmer
                   </span>
-                  <span className={`text-gradient-secondary transition-all duration-500 ${
+                  <span className={`text-gradient-secondary transition-all duration-500 animate-pulse ${
                     currentTitle === 3 ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-4'
                   } ${currentTitle === 3 ? 'block' : 'hidden'}`}>
                     Problem Solver
