@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const certificationsData = [
   {
+    title: "45 Days Full Stack Web Development Internship",
+    issuer: "LnB",
+    date: "2024",
+    description: "Intensive full stack web development internship program covering frontend and backend technologies, project development, and industry best practices.",
+    skills: ["Full Stack Development", "Frontend Technologies", "Backend Development", "Project Management", "Industry Practices"],
+    verified: true,
+    credentialId: "LNB-FSWD-2024-001"
+  },
+  {
     title: "RSCIT (Rajasthan State Certificate in Information Technology)",
     issuer: "Government of Rajasthan",
     date: "2023",
