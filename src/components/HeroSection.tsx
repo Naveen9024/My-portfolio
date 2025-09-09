@@ -80,7 +80,7 @@ const HeroSection = () => {
               
               <p className="text-lg text-foreground-muted leading-relaxed max-w-xl text-center lg:text-left">
                 I'm a developer who crafts responsive websites. My job is to make sure every site I build is fast, 
-                user-friendly, and looks amazing on any screen. Currently pursuing B.Tech at Jaipur Engineering College.
+                user-friendly, and looks amazing on any screen. Currently pursuing B.Tech (2023 - 2027) at Jaipur Engineering College.
               </p>
             </div>
 
@@ -140,41 +140,6 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Quick Contact Section */}
-        <div className="absolute bottom-20 right-8 hidden lg:block scroll-reveal" style={{ animationDelay: '1.4s' }}>
-          <div className="glass-card p-4 space-y-3">
-            <h3 className="text-sm font-semibold text-foreground mb-2">Quick Connect</h3>
-            <div className="flex flex-col space-y-2">
-              <Button 
-                variant="glow" 
-                size="sm" 
-                className="justify-start"
-                onClick={() => window.open('mailto:naveensaini@email.com')}
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Email
-              </Button>
-              <Button 
-                variant="glow" 
-                size="sm" 
-                className="justify-start"
-                onClick={() => window.open('https://wa.me/1234567890')}
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
-              </Button>
-              <Button 
-                variant="glow" 
-                size="sm" 
-                className="justify-start"
-                onClick={() => window.open('tel:+1234567890')}
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Call
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
