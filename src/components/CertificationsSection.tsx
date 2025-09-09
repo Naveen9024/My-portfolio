@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const certificationsData = [
   {
+    title: "RSCIT (Rajasthan State Certificate in Information Technology)",
+    issuer: "Government of Rajasthan",
+    date: "2023",
+    description: "State-level certification in information technology covering computer fundamentals, internet applications, and digital literacy.",
+    skills: ["Computer Fundamentals", "MS Office", "Internet Applications", "Digital Literacy"],
+    verified: true,
+    credentialId: "RSCIT-2023-001"
+  },
+  {
     title: "Full Stack Web Development",
     issuer: "Tech Education Platform",
     date: "2024",

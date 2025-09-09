@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Mail, MessageCircle, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-abstract.jpg";
 import { useState, useEffect } from "react";
+import Navigation from "@/components/Navigation";
 
 const HeroSection = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -21,6 +22,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <Navigation />
       {/* Background with hero glow effect */}
       <div className="absolute inset-0 hero-glow">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background-tertiary" />
@@ -135,6 +137,42 @@ const HeroSection = () => {
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-electric-blue/20 rounded-full blur-xl animate-glow-pulse" />
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-violet-purple/20 rounded-full blur-xl animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
+          </div>
+        </div>
+        
+        {/* Quick Contact Section */}
+        <div className="absolute bottom-20 right-8 hidden lg:block scroll-reveal" style={{ animationDelay: '1.4s' }}>
+          <div className="glass-card p-4 space-y-3">
+            <h3 className="text-sm font-semibold text-foreground mb-2">Quick Connect</h3>
+            <div className="flex flex-col space-y-2">
+              <Button 
+                variant="glow" 
+                size="sm" 
+                className="justify-start"
+                onClick={() => window.open('mailto:naveensaini@email.com')}
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Email
+              </Button>
+              <Button 
+                variant="glow" 
+                size="sm" 
+                className="justify-start"
+                onClick={() => window.open('https://wa.me/1234567890')}
+              >
+                <MessageCircle className="w-4 h-4 mr-2" />
+                WhatsApp
+              </Button>
+              <Button 
+                variant="glow" 
+                size="sm" 
+                className="justify-start"
+                onClick={() => window.open('tel:+1234567890')}
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Call
+              </Button>
+            </div>
           </div>
         </div>
       </div>
